@@ -1,0 +1,46 @@
+body {
+    min-width: 357px;
+    overflow-x: hidden;
+    background-color: #212121;
+}
+
+
+
+span.favimg {
+    
+}
+div#jtabs-list {
+    font:menu;
+    color:black;
+    cursor:default;
+}
+
+div.tabc {
+    margin: 4px;
+    border: 1px solid;
+    border-color: #bdbdb3;
+    border-radius: 8px;
+    background-color: #212121; 
+    color: #bdbdb3;
+    cursor:pointer;
+}
+
+
+img {
+    width: 16px;
+    height: 16px;
+    float: left;
+    margin-right: 4px;
+    margin-left: 4px;
+    margin-top: 3px;
+    
+}
+
+div.tab {
+    padding: 2px;
+}
+
+div#jtabs-list div.tab:hover {
+    color: orange;
+    cursor:default;
+}

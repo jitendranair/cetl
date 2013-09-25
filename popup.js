@@ -4,28 +4,46 @@
 
 console.log("jtabs loading popup.js");
 
-var mytabs =  function () {
+(function(jtabs,$,undefined){
+    jtabs.mytabs =  function () {
         console.log("In mytabs()");
         chrome.tabs.query({currentWindow: true}, function(tabs) {
 	        console.log("mytabs():In chrome.tabs.query");
             for (var i=0;i<tabs.length;i++){
-                console.log(tabs[i].url);
-                $("ul#jtabs-list").each(function(index,element){
-                    var a = document.createElement("a");
-                    var br = document.createElement("br");
-                    a.href = tabs[i].url;
-                    a.innerHTML = tabs[i].title;
-                    $(a).data({tid: tabs[i].id}).append(br);
-                    $(a).click(function(){
+                console.log( "url: " + tabs[i].url);
+                
+                $("div#jtabs-list").each(function(index,element){
+                    var div = document.createElement("div");
+                    div.className = "tabc";
+                    var span = document.createElement("span");
+                    var img = document.createElement("img");
+                    if (tabs[i].favIconUrl && 
+                        ( tabs[i].favIconUrl.indexOf("http://" == 0) ||
+                          tabs[i].favIconUrl.indexOf("https://") == 0 ) ){
+                              img.src = tabs[i].favIconUrl ;
+                              console.log("favIconUrl:" + tabs[i].favIconUrl);
+                    };
+                    var divtab = document.createElement("div");
+                    
+                    divtab.className = "tab";
+                    divtab.innerHTML = tabs[i].title;
+                    $(divtab).data({tid: tabs[i].id});
+                    $(divtab).click(function(){
                         chrome.tabs.update( $(this).data("tid"), {active : true} );
                         console.log("select tab");
                     });
-                    $(this).append(a);
+                    $(this).append(div);
+                    //$(span).append(img);
+                    $(div).append(img);
+                    $(div).append(divtab);
+                    
+                    if (tabs[i].active) $(divtab).css({"color":"lightblue"});
                 });
             }
         });
-};
+    };
+}(window.jtabs = window.jtabs || {},jQuery));
 
 document.addEventListener('DOMContentLoaded', function () {
-  mytabs();
+  jtabs.mytabs();
 });
