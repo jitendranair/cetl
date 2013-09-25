@@ -3,8 +3,8 @@
 // found in the LICENSE file.
 
 console.log("jtabs loading popup.js");
-var jtabs = {
-    mytabs: function () {
+
+var mytabs =  function () {
         console.log("In mytabs()");
         chrome.tabs.query({currentWindow: true}, function(tabs) {
 	        // Toggle the pinned status
@@ -26,12 +26,9 @@ var jtabs = {
                     $(this).append(a);
                 });
             }
-
-            
         });
-    }
 };
 
 document.addEventListener('DOMContentLoaded', function () {
-  jtabs.mytabs();
+  mytabs();
 });
