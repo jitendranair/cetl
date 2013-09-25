@@ -6,30 +6,32 @@ console.log("jtabs loading popup.js");
 var jtabs = {
     mytabs: function () {
         console.log("In mytabs()");
-        chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        chrome.tabs.query({currentWindow: true}, function(tabs) {
 	        // Toggle the pinned status
 	        //var current = tabs[0];
 	        //chrome.tabs.update(current.id, {'pinned': !current.pinned});
             console.log("mytabs():In chrome.tabs.query");
-            for (var i=0;i<tabs.length;i++){ 
-                console.log(tabs[i]);
+            for (var i=0;i<tabs.length;i++){
+                console.log(tabs[i].url);
+                $("ul#jtabs-list").each(function(index,element){
+                    var a = document.createElement("a");
+                    var br = document.createElement("br");
+                    a.href = tabs[i].url;
+                    a.innerHTML = tabs[i].title;
+                    $(a).data({tid: tabs[i].id}).append(br);
+                    $(a).click(function(){
+                        chrome.tabs.update( $(this).data("tid"), {active : true} );
+                        console.log("select tab");
+                    });
+                    $(this).append(a);
+                });
             }
-            /*
-            $.each(function(index,element){
-                
-            });*/
-        });
-    },
-    
-    onload: function() {
-        chrome.commands.onCommand.addListener(function(command) {	  
-            this.mytabs();
+
+            
         });
     }
-        
 };
 
 document.addEventListener('DOMContentLoaded', function () {
   jtabs.mytabs();
 });
-
