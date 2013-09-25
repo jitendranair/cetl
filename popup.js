@@ -7,10 +7,7 @@ console.log("jtabs loading popup.js");
 var mytabs =  function () {
         console.log("In mytabs()");
         chrome.tabs.query({currentWindow: true}, function(tabs) {
-	        // Toggle the pinned status
-	        //var current = tabs[0];
-	        //chrome.tabs.update(current.id, {'pinned': !current.pinned});
-            console.log("mytabs():In chrome.tabs.query");
+	        console.log("mytabs():In chrome.tabs.query");
             for (var i=0;i<tabs.length;i++){
                 console.log(tabs[i].url);
                 $("ul#jtabs-list").each(function(index,element){
