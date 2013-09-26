@@ -5,42 +5,46 @@
 console.log("jtabs loading popup.js");
 
 (function(jtabs,$,undefined){
+
     jtabs.mytabs =  function () {
         console.log("In mytabs()");
         chrome.tabs.query({currentWindow: true}, function(tabs) {
 	        console.log("mytabs():In chrome.tabs.query");
             for (var i=0;i<tabs.length;i++){
                 console.log( "url: " + tabs[i].url);
-                
-                $("div#jtabs-list").each(function(index,element){
-                    var div = document.createElement("div");
-                    div.className = "tabc";
-                    var span = document.createElement("span");
-                    var img = document.createElement("img");
-                    if (tabs[i].favIconUrl && 
-                        ( tabs[i].favIconUrl.indexOf("http://" == 0) ||
-                          tabs[i].favIconUrl.indexOf("https://") == 0 ) ){
-                              img.src = tabs[i].favIconUrl ;
-                              console.log("favIconUrl:" + tabs[i].favIconUrl);
-                    };
-                    var divtab = document.createElement("div");
-                    
-                    divtab.className = "tab";
-                    divtab.innerHTML = tabs[i].title;
-                    $(divtab).data({tid: tabs[i].id});
-                    $(divtab).click(function(){
-                        chrome.tabs.update( $(this).data("tid"), {active : true} );
-                        console.log("select tab");
-                    });
-                    $(this).append(div);
-                    //$(span).append(img);
-                    $(div).append(img);
-                    $(div).append(divtab);
-                    
-                    if (tabs[i].active) $(divtab).css({"color":"lightblue"});
-                });
+                var $div_tab = gen_tab_entry(tabs[i]);
+                $("div#jtabs-list").append($div_tab);
             }
         });
+    };
+
+    var gen_tab_entry = function(tab) {
+        var div_tab = document.createElement("div");
+        div_tab.className = "tab-cont";
+        $(div_tab).data({tid: tab.id});
+        $(div_tab).click(function(){
+            chrome.tabs.update( $(this).data("tid"), {active : true} );
+            console.log("select tab");
+        });
+        var img = document.createElement("img");
+        if (tab.favIconUrl &&
+            ( tab.favIconUrl.indexOf("http://" == 0) ||
+              tab.favIconUrl.indexOf("https://") == 0 ) ){
+                  img.src = tab.favIconUrl ;
+                  console.log("favIconUrl:" + tab.favIconUrl);
+              };
+        var div_tab_title = document.createElement("div");
+        div_tab_title.className = "tab-title";
+        div_tab_title.innerHTML = tab.title;
+        
+        $(div_tab).append(img);
+        $(div_tab).append(div_tab_title);
+
+        if (tab.active) {
+            $(div_tab).addClass('active'); 
+            $(div_tab_title).addClass('active'); 
+        }
+        return(div_tab);
     };
 }(window.jtabs = window.jtabs || {},jQuery));
 
