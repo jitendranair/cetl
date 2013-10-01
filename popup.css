@@ -4,11 +4,6 @@ body {
     background-color: #212121;
 }
 
-
-
-span.favimg {
-    
-}
 div#jtabs-list {
     font:menu;
     color:black;
@@ -49,5 +44,15 @@ img {
 
 div.tab-title {
     padding: 2px;
+    display : inline-block;
+}
+
+span.tab-remove {
+    padding-left: 4px;
+    color: blue;
+}
+
+span.tab-remove:hover {
+    color: red;
 }
 
