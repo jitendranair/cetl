@@ -38,6 +38,7 @@ console.log("jtabs loading popup.js");
         var span = document.createElement("span");
         span.innerHTML = "X";
         span.className = "tab-remove";
+        span.title = 'Close Tab' ;
         $(tabmap.div_tab).append(span);
         $(tabmap.div_tab).click(function(){
             chrome.tabs.remove( $(this).data("tid"));
