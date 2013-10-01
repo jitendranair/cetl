@@ -48,11 +48,18 @@ div.tab-title {
 }
 
 span.tab-remove {
-    padding-left: 4px;
+    padding: 0px 4px ;
+    margin: 0px 2px;
     color: blue;
+    font-weight: bold;
+    border : 2px;
+    border-color: SeaGreen;
+    border-radius: 5px;
+    border-style: solid;
 }
 
 span.tab-remove:hover {
-    color: red;
+    background-color: red;
+    
 }
 
