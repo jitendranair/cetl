@@ -40,8 +40,8 @@ console.log("jtabs loading popup.js");
         span.className = "tab-remove";
         span.title = 'Close Tab' ;
         $(tabmap.div_tab).append(span);
-        $(tabmap.div_tab).click(function(){
-            chrome.tabs.remove( $(this).data("tid"));
+        $(span).click(function(){
+            chrome.tabs.remove( $(this).parents(".tab-cont").data("tid"));
             console.log("remove tab");
         });
         return tabmap.div_tab;
