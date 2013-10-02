@@ -6,6 +6,11 @@ console.log("jtabs loading popup.js");
 
 (function(jtabs,$,undefined){
 
+    var cleanTabList = function (){
+        var tlist = document.getElementById("jtabs-list");
+        tlist.innerHTML = "";
+    };
+    
     jtabs.mytabs =  function () {
         console.log("In mytabs()");
         chrome.tabs.query({currentWindow: true}, function(tabs) {
@@ -43,6 +48,8 @@ console.log("jtabs loading popup.js");
         $(span).click(function(){
             chrome.tabs.remove( $(this).parents(".tab-cont").data("tid"));
             console.log("remove tab");
+            cleanTabList();
+            jtabs.mytabs();
         });
         return tabmap.div_tab;
     };
