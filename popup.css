@@ -33,6 +33,11 @@ div.tab-cont.active {
     background-color: #CAFFCC;
 }
 
+div.tab-cont.active:hover {
+    border-color: pink;
+    background-color: pink;
+}
+
 img {
     width: 16px;
     height: 16px;
