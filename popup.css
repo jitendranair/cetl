@@ -1,6 +1,4 @@
 body {
-    min-width: 357px;
-    overflow-x: hidden;
     background-color: #212121;
 }
 
@@ -8,6 +6,7 @@ div#jtabs-list {
     font:menu;
     color:black;
     cursor:default;
+    width: 500px;
 }
 
 div.tab-cont {
@@ -18,6 +17,8 @@ div.tab-cont {
     background-color: #212121; 
     color: #bdbdb3;
     cursor:pointer;
+    height: 28px;
+    overflow: hidden;
 }
 
 div.tab-cont:hover {
@@ -43,6 +44,7 @@ img {
 }
 
 div.tab-title {
+    width: 400px;
     padding: 2px;
     display : inline-block;
 }

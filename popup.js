@@ -6,6 +6,12 @@ console.log("jtabs loading popup.js");
 
 (function(jtabs,$,undefined){
 
+    /* <div class="tab-cont">
+           <img  src="http://developer.chrome.com/favicon.ico">
+           <div  class="tab-title"><span> Title </span></div>
+            <span class="tab-remove" title="Close  Tab">X</span>
+        </div>
+     */
     var cleanTabList = function (){
         var tlist = document.getElementById("jtabs-list");
         tlist.innerHTML = "";
@@ -34,23 +40,29 @@ console.log("jtabs loading popup.js");
     };
     var setTabTitle = function(tab){
         var div_tab_title = document.createElement("div");
+        //var span = document.createElement("span");
         div_tab_title.className = "tab-title";
+        div_tab_title.title = tab.title;
         div_tab_title.innerHTML = tab.title;
+        //span.innerHTML = tab.title;
+        //div_tab_title.appendChild(span);
         return div_tab_title;
     };
 
     var setTabRemover = function(tabmap){
+        var div = document.createElement("div");
         var span = document.createElement("span");
         span.innerHTML = "X";
         span.className = "tab-remove";
         span.title = 'Close Tab' ;
-        $(tabmap.div_tab).append(span);
         $(span).click(function(){
             chrome.tabs.remove( $(this).parents(".tab-cont").data("tid"));
             console.log("remove tab");
             cleanTabList();
             jtabs.mytabs();
         });
+        $(div).css({"float":"right","padding":"4px"}).append(span);
+        $(tabmap.div_tab).append(div);
         return tabmap.div_tab;
     };
 
