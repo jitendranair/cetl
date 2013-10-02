@@ -1,28 +1,31 @@
 body {
-    background-color: #212121;
+    background-color: #364F86;
+    border-color: #364F86;
 }
 
 div#jtabs-list {
-    font:menu;
-    color:black;
     cursor:default;
-    width: 500px;
+    width: 650px;
 }
 
 div.tab-cont {
     margin: 4px;
     border: 1px solid;
-    border-color: #bdbdb3;
     border-radius: 8px;
-    background-color: #212121; 
-    color: #bdbdb3;
+    border-color: #0AA594;
+    background-color: #0AA594;
+    color: black;
     cursor:pointer;
     height: 28px;
     overflow: hidden;
+    font-family: monaco;
+    font-size: 14.5px;
+    font-weight: normal;
 }
 
 div.tab-cont:hover {
     background-color: #bdbdb3;
+    border-color: #bdbdb3;
     color: darkred;
     cursor:default;
 }
@@ -36,6 +39,7 @@ div.tab-cont.active {
 div.tab-cont.active:hover {
     border-color: pink;
     background-color: pink;
+    color: darkred;
 }
 
 img {
@@ -49,24 +53,25 @@ img {
 }
 
 div.tab-title {
-    width: 400px;
+    width: 550px;
     padding: 2px;
     display : inline-block;
 }
 
 span.tab-remove {
-    padding: 0px 4px ;
-    margin: 0px 2px;
-    color: blue;
-    font-weight: bold;
-    border : 2px;
-    border-color: SeaGreen;
+    background-color: #364F86;
+    border-color: #364F86;
     border-radius: 5px;
     border-style: solid;
+    padding: 0px 4px ;
+    margin: 0px 2px;
+    color: #0AA594;
+    font-weight: bold;
+    border : 2px;
+    
 }
 
 span.tab-remove:hover {
-    background-color: red;
-    
+    color: red;
 }
 
