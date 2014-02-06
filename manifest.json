@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
 
-    "name": "Jitendra Nair's Tabs",
+    "name": "Chrome Tabs Lister. (JN)",
     "description": " ",
     "version": "1.0",
     
@@ -17,13 +17,5 @@
     "background": {
         "scripts": ["background.js"],
         "persistent": false
-    },
-    
-    "commands": {
-        
-        "_execute_browser_action": {
-            "suggested_key": {  "default": "Alt+S "  }
-        }
-
     }
 }
