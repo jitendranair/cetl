@@ -1,10 +1,9 @@
-#CTL:  Chrome Tabs Lister.
+#CETL:  A Chrome Extension to list/close tabs.
 * List tabs.
 * Allows to close a tab.
 
 ## Installation
-* git clone https://github.com/jitendranair/ctl
-* Google-Chrome-Browser -> Tools -> Extension -> Load unpacked extension -> "Select the 'ctl' directory created by the git clone command."
+-
 
 ## Use
 * Installation should leave an green color icon on the tool bar.
