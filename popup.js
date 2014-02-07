@@ -22,7 +22,6 @@
     _ctl_jn.main =  function () {
         chrome.tabs.query({currentWindow: true}, function(tabs) {
 	        for (var i=0;i<tabs.length;i++){
-                console.log( "url: " + tabs[i].url);
                 var $div_tab = getEntry(tabs[i]);
                 $("div#_ctl_jn_list").append($div_tab);
             }
@@ -77,7 +76,6 @@
         $(div_tab).data({tid: tab.id});
         $(div_tab).click(function(){
             chrome.tabs.update( $(this).data("tid"), {active : true} );
-            console.log("select tab");
         });
         var img = favicon(tab);
         $(div_tab).append(img);

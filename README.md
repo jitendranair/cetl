@@ -1,17 +1,15 @@
-# Chrome Tabs Lister.
+#CTL:  Chrome Tabs Lister.
 
 - List tabs.
 - Allows to close a tab.
 
 ## Installation
+git clone https://github.com/jitendranair/ctl
+Google-Chrome-Browser -> Tools -> Extension -> Load Unpackes Extension -> "Select the 'ctl' directory created by the git clone command." 
 
-### 
-
-### Install requirement -  jQuery (Example : Ubuntu Linux 12.04 )
-* Move to the 'js' subdirectory and install jquery   
- 
-* wget http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.map -O jquery-2.0.3.min.map
-* wget http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js -O jquery-2.0.3.min.js
+## Tested On :
+- Google Chrome Version 32.0.1700.107 ( Ubuntu 12.04 )
+- Chromium Version 32.0.1700.102 ( Ubuntu 12.04 )  
 
 ## License
 
