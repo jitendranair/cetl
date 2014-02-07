@@ -3,12 +3,12 @@ body {
     border-color: #364F86;
 }
 
-div#jtabs-list {
+div#_ctl_jn_list {
     cursor:default;
     width: 650px;
 }
 
-div.tab-cont {
+div._ctl_jn_tab_cont {
     margin: 4px;
     border: 1px solid;
     border-radius: 8px;
@@ -23,20 +23,20 @@ div.tab-cont {
     font-weight: normal;
 }
 
-div.tab-cont:hover {
+div._ctl_jn_tab_cont:hover {
     background-color: #bdbdb3;
     border-color: #bdbdb3;
     color: darkred;
     cursor:default;
 }
 
-div.tab-cont.active {
+div._ctl_jn_tab_cont.active {
     color: black; 
     border-color: #CAFFCC;
     background-color: #CAFFCC;
 }
 
-div.tab-cont.active:hover {
+div._ctl_jn_tab_cont.active:hover {
     border-color: pink;
     background-color: pink;
     color: darkred;
@@ -52,13 +52,13 @@ img {
     
 }
 
-div.tab-title {
+div._ctl_jn_tab_title {
     width: 550px;
     padding: 2px;
     display : inline-block;
 }
 
-span.tab-remove {
+span._ctl_jn_tab_remove {
     background-color: #364F86;
     border-color: #364F86;
     border-radius: 5px;
@@ -71,7 +71,7 @@ span.tab-remove {
     
 }
 
-span.tab-remove:hover {
+span._ctl_jn_tab_remove:hover {
     color: red;
 }
 

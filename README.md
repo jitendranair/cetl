@@ -3,9 +3,15 @@
 - List tabs.
 - Allows to close a tab.
 
+## Installation
 
-## Downloads
--
+### 
+
+### Install requirement -  jQuery (Example : Ubuntu Linux 12.04 )
+* Move to the 'js' subdirectory and install jquery   
+ 
+* wget http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.map -O jquery-2.0.3.min.map
+* wget http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js -O jquery-2.0.3.min.js
 
 ## License
 
