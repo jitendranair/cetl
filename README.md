@@ -1,20 +1,27 @@
 #CTL:  Chrome Tabs Lister.
-
-- List tabs.
-- Allows to close a tab.
+* List tabs.
+* Allows to close a tab.
 
 ## Installation
-git clone https://github.com/jitendranair/ctl
-Google-Chrome-Browser -> Tools -> Extension -> Load Unpackes Extension -> "Select the 'ctl' directory created by the git clone command." 
+* git clone https://github.com/jitendranair/ctl
+* Google-Chrome-Browser -> Tools -> Extension -> Load unpacked extension -> "Select the 'ctl' directory created by the git clone command."
+
+## Use
+* Installation should leave an green color icon on the tool bar.
+* Click it to see the tab listing.
+* Clicking on any entry should switch to that tab.
+* Clicking on the 'X' mark on any entry, placed to the extreme right should close the tab. 
 
 ## Tested On :
-- Google Chrome Version 32.0.1700.107 ( Ubuntu 12.04 )
-- Chromium Version 32.0.1700.102 ( Ubuntu 12.04 )  
+* Google Chrome Version 32.0.1700.107 ( Ubuntu 12.04 )
+* Chromium Version 32.0.1700.102 ( Ubuntu 12.04 )  
+
+## Libraries this program  uses:
+* jQuery http://jquery.com/
 
 ## License
-
-Simplified BSD License
-======================
+Simplified BSD License 
+=======================
 
 Copyright (c) 2014, Jitendra Nair
 All rights reserved.
