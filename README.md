@@ -1,4 +1,4 @@
-#CETL:  A Chrome Extension to list/close tabs.
+#CETL:  A Chrome Extension to list and close tabs.
 * List tabs.
 * Allows to close a tab.
 
@@ -12,7 +12,7 @@
 * Clicking on the 'X' mark on any entry, placed to the extreme right should close the tab. 
 
 ## Tested On :
-* Google Chrome Version 32.0.1700.107 ( Ubuntu 12.04 )
+* GC Version 32.0.1700.107 ( Ubuntu 12.04 )
 * Chromium Version 32.0.1700.102 ( Ubuntu 12.04 )  
 
 ## Libraries this program  uses:
