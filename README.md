@@ -4,13 +4,13 @@
 
 ## Installation.
 ### Using extension file.
-(Ref: https://support.google.com/chrome_webstore/answer/2664769?p=crx_warning&rd=1)
-- Download extension file (https://github.com/jitendranair/cetl/raw/master/extension.crx).
+- Download extension file [extension.crx](https://github.com/jitendranair/cetl/raw/master/extension.crx).
 - On the browser, navigate to the 'Extensions' page via : Browser Menu Icon -> Tools -> Extensions
 - Drag-Drop the extension file on the "Extensions" page. 
+(Ref: [More on extension file installation](https://support.google.com/chrome_webstore/answer/2664769?p=crx_warning&rd=1).)
 
 ### Using unpacked sources (Dev mode).
-- Download zip archive from https://github.com/jitendranair/cetl/archive/master.zip
+- Download zip archive from [here](https://github.com/jitendranair/cetl/archive/master.zip). 
 - Unzipping the archive should create a "cetl-master" directory. 
 - On the browser, navigate to the 'Extensions' page via : Browser Menu Icon -> Tools -> Extensions
 - Check the 'Developer mode' option, on the top right hand side of the Extensions page.
@@ -28,7 +28,7 @@
 * Chromium Version 32.0.1700.102 ( Ubuntu 12.04 )  
 
 ## Libraries this program  uses:
-* jQuery http://jquery.com/
+* [jQuery](http://jquery.com/)
 
 ## License
 Simplified BSD License 
