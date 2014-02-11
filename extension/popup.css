@@ -1,0 +1,77 @@
+body {
+    background-color: #364F86;
+    border-color: #364F86;
+}
+
+div#_ctl_jn_list {
+    cursor:default;
+    width: 650px;
+}
+
+div._ctl_jn_tab_cont {
+    margin: 4px;
+    border: 1px solid;
+    border-radius: 8px;
+    border-color: #0AA594;
+    background-color: #0AA594;
+    color: black;
+    cursor:pointer;
+    height: 28px;
+    overflow: hidden;
+    font-family: monaco;
+    font-size: 14.5px;
+    font-weight: normal;
+}
+
+div._ctl_jn_tab_cont:hover {
+    background-color: #bdbdb3;
+    border-color: #bdbdb3;
+    color: darkred;
+    cursor:default;
+}
+
+div._ctl_jn_tab_cont.active {
+    color: black; 
+    border-color: #CAFFCC;
+    background-color: #CAFFCC;
+}
+
+div._ctl_jn_tab_cont.active:hover {
+    border-color: pink;
+    background-color: pink;
+    color: darkred;
+}
+
+img {
+    width: 16px;
+    height: 16px;
+    float: left;
+    margin-right: 4px;
+    margin-left: 4px;
+    margin-top: 3px;
+    
+}
+
+div._ctl_jn_tab_title {
+    width: 550px;
+    padding: 2px;
+    display : inline-block;
+}
+
+span._ctl_jn_tab_remove {
+    background-color: #364F86;
+    border-color: #364F86;
+    border-radius: 5px;
+    border-style: solid;
+    padding: 0px 4px ;
+    margin: 0px 2px;
+    color: #0AA594;
+    font-weight: bold;
+    border : 2px;
+    
+}
+
+span._ctl_jn_tab_remove:hover {
+    color: red;
+}
+
