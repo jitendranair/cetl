@@ -3,7 +3,10 @@
 * Allows to close a tab.
 
 ## Installation
--
+(Ref: https://support.google.com/chrome_webstore/answer/2664769?p=crx_warning&rd=1)
+- Download extension file.
+- Browser Menu Icon -> Tools -> Extensions
+- Drag-Drop the extension file on the "Extensions" page. 
 
 ## Use
 * Installation should leave an green color icon on the tool bar.
