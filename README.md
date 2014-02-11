@@ -4,7 +4,7 @@
 
 ## Installation
 (Ref: https://support.google.com/chrome_webstore/answer/2664769?p=crx_warning&rd=1)
-- Download extension file.
+- Download extension file (https://github.com/jitendranair/cetl/raw/master/extension.crx).
 - Browser Menu Icon -> Tools -> Extensions
 - Drag-Drop the extension file on the "Extensions" page. 
 
