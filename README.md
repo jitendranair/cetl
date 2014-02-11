@@ -2,11 +2,20 @@
 * List tabs.
 * Allows to close a tab.
 
-## Installation
+## Installation.
+### Using extension file.
 (Ref: https://support.google.com/chrome_webstore/answer/2664769?p=crx_warning&rd=1)
 - Download extension file (https://github.com/jitendranair/cetl/raw/master/extension.crx).
-- Browser Menu Icon -> Tools -> Extensions
+- On the browser, navigate to the 'Extensions' page via : Browser Menu Icon -> Tools -> Extensions
 - Drag-Drop the extension file on the "Extensions" page. 
+
+### Using unpacked sources (Dev mode).
+- Download zip archive from https://github.com/jitendranair/cetl/archive/master.zip
+- Unzipping the archive should create a "cetl-master" directory. 
+- On the browser, navigate to the 'Extensions' page via : Browser Menu Icon -> Tools -> Extensions
+- Check the 'Developer mode' option, on the top right hand side of the Extensions page.
+- Click on the "Load unpacked extension" button.
+- Navigate to the 'cetl-master' directory and open the 'extension' sub-directory.
 
 ## Use
 * Installation should leave an green color icon on the tool bar.
