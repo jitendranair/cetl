@@ -38,7 +38,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 The views and conclusions contained in the software and documentation are those of the authors and should not be interpreted as representing official policies, either expressed or implied, of the copyright holders.
 
-You should have received a copy of the GNU General Public License along with this program.
+
+You should have received a copy of the License along with this program.
 
 
  
